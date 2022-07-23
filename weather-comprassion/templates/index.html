@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weather difference</title>
+</head>
+<body>
+	<h1 class="h1">
+		{%if temp[1] != max%}
+			В
+			{{gor2}}
+			теплее чем в 
+			{{gor}}
+			на
+		{%else%}
+			в
+			{{gor}}
+			теплее чем в 
+			{{ gor2}}
+			на
+		{% endif %}
+		{{max1-min}}
+		{% if (max1-min)== 2 or max1-min== 3 or max1-min==4 %} 
+				{{'градуса'}}
+		{% elif (max1-min)==1%}
+				{{'градус'}}
+		{%else%}
+			{{'градусов'}}
+		{% endif %}
+
+		</h1>
+</body>
+</html>
